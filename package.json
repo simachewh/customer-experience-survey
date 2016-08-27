@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/simachewh/customer-experience-survey#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "morgan": "^1.7.0"
   }
 }
