@@ -4,8 +4,9 @@
 
 (function () {
     angular
-        .module("ces", ["ngRoute", "chart.js"])
-        .config(['ChartJsProvider', function (ChartJsProvider) {
+        .module("ces", ["ngRoute", "zingchart-angularjs"]);
+
+        /*.config(['ChartJsProvider', function (ChartJsProvider) {
             // Configure all charts
             ChartJsProvider.setOptions({
                 chartColors: ['#FF5252', '#FF8A80'],
@@ -15,5 +16,5 @@
             ChartJsProvider.setOptions('line', {
                 showLines: false
             });
-        }]);
+        }]);*/
 }());

@@ -1,9 +1,19 @@
 <section>
     <h2>Here are the results of the survey conducted</h2>
     <section>
-        <canvas id="line" class="chart chart-line" chart-data="data"
-                chart-labels="vm.lables" chart-series="vm.series" chart-options="vm.options"
-                chart-dataset-override="vm.datasetOverride" >
-        </canvas>
+        <!--<canvas id="line"
+                class="chart chart-line"
+                chart-data="vm.data"
+                chart-labels="vm.lables"
+                chart-series="vm.series"
+                chart-options="vm.options"
+                chart-dataset-override="vm.datasetOverride"
+                height="380px"
+                width="520px">
+        </canvas>-->
+        <zingchart id="chart1"
+                   zc-json="vm.zcOptions"></zingchart>
+        <!--<zingchart id="myChart" zc-json="vm.myJson"
+                   zc-height=500 zc-width=600></zingchart>-->
     </section>
 </section>
