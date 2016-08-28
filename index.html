@@ -55,13 +55,11 @@
         </button>
     </div>
     <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-3 col-md-3 col-sm-3">
-        <button type="button"
-                class="btn btn-success btn-block"
-                ng-controller="SurveyController as vm"
-                ng-disabled="vm.resultsReady()">
-            <a href="/surveyResults">Results Chart</a>
 
-        </button>
+            <a href="/surveyResults" class="btn btn-success btn-block"
+               ng-controller="SurveyController as vm"
+               ng-disabled="vm.resultsReady()">Results Chart</a>
+
     </div>
     <!-- Clear records button / not ideal to give for real users. Just to make it easy on test-->
     <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-3 col-md-3 col-sm-3"

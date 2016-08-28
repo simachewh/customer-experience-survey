@@ -20,6 +20,10 @@
         self.getAll = getAll;
         self.resetForm = resetForm;
         self.resultsReady = resultsReady;
+        self.yes = [];
+        self.no = [];
+        self.maybe = [];
+
         self.currentPath = $location.path();
 
         self.answer = {};

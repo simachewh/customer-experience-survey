@@ -12,6 +12,9 @@
 
         var answerStore = {};
         answerStore.allAnswers = getAll() || [];
+        answerStore.yes = {};
+        answerStore.no = {};
+        answerStore.maybe = {};
         console.log("But all answers are ", Array.isArray(answerStore.allAnswers));
         answerStore.insert = insert;
         answerStore.remove = remove;
