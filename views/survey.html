@@ -1,5 +1,62 @@
 <section>
-    <article>
-        <h2>Welcome to the Customer Experience Survey</h2>
+    <article class="row">
+        <h2>Welcome!</h2>
     </article>
+    <article class="row">
+        <form class="form-horizontal" id="questionForm"
+              name="surveyForm" ng-submit="vm.addAnswer()">
+            <table class="table table-striped table-hover">
+                <tr>
+                    <thead>
+                    <th></th>
+                    <th>Yes</th>
+                    <th>Maybe</th>
+                    <th>No</th>
+                    </thead>
+                </tr>
+
+                <tr ng-repeat="q in vm.questions">
+                    <td>
+                        <h4 class="survey-question">{{q.text}}</h4>
+                    </td>
+                    <td>
+                        <!--lables are for styling the radio buttons latter on-->
+                        <label for="q-{{q.id}}-c-{{vm.choices[0]}}"></label>
+                        <input type="radio"
+                               id="q-{{q.id}}-c-{{vm.choices[0]}}"
+                               name="question-{{q.id}}"
+                               value="{{vm.choices[0]}}"
+                               ng-model="q.selectedAns" required>
+                    </td>
+                    <td>
+                        <label for="q-{{q.id}}-c-{{vm.choices[1]}}"></label>
+                        <input type="radio"
+                               id="q-{{q.id}}-c-{{vm.choices[1]}}"
+                               name="question-{{q.id}}"
+                               value="{{vm.choices[1]}}"
+                               ng-model="q.selectedAns" required>
+                    </td>
+                    <td>
+                        <label for="q-{{q.id}}-c-{{vm.choices[2]}}"></label>
+                        <input type="radio"
+                               id="q-{{q.id}}-c-{{vm.choices[2]}}"
+                               name="question-{{q.id}}"
+                               value="{{vm.choices[2]}}"
+                               ng-model="q.selectedAns" required>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- submit button -->
+            <div class="col-sm-offset-5 col-sm-3">
+                <button type="submit"
+                        class="btn btn-primary btn-lg btn-block">
+                    Submit Answer
+                </button>
+            </div>
+
+            </div>
+        </form>
+    </article>
+
 </section>

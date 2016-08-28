@@ -7,18 +7,28 @@
         .module("ces")
         .config(["$routeProvider", "$locationProvider", appRouteConfig]);
 
+    /**
+     *
+     * @param $routeProvider
+     * @param $locationProvider
+     */
     function appRouteConfig($routeProvider, $locationProvider) {
-        $locationProvider.htm5Mde(true);
+
+        $locationProvider.html5Mode(true);
 
         $routeProvider
             .when("/", {
                 templateUrl: "../views/survey.html",
                 controller: "SurveyController",
-                conteollerAs: "vm"
+                controllerAs: "vm"
             })
-            .when("/results", {
+            .when("/surveyResults", {
                 templateUrl: "../views/results.html",
-                controller: "ResultsController"
+                controller: "ResultsController",
+                controllerAs: "vm"
             })
+            .otherwise({
+                redirectTo: "/"
+            });
     };
 }());

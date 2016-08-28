@@ -10,18 +10,20 @@ var app = express();
 
 //Handle cross-origin resource sharing
 app.use(function (req, res, next) {
-    rres.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
     res.setHeader('Access-Control-Allow-Headers',
         'X-Requested-With,content-type, Authorization');
     next();
 });
 
+app.use(morgan("dev"));
+
 //setting root location to serve public assets
-app.use(express.static(_dirname + "/"));
+app.use(express.static(__dirname + "/"));
 
 app.get("*", function (req, res) {
-    res.sendFile(path.join(_dirname + "/index.html"))
+    res.sendFile(path.join(__dirname + "/index.html"))
 });
 
 var listener = app.listen(Number(process.env.PORT || 8080));
